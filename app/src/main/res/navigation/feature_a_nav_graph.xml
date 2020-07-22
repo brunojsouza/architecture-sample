@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feature_a_nav_graph"
+    app:startDestination="@id/fr_home_a">
+
+    <fragment
+        android:id="@+id/fr_home_a"
+        tools:layout="@layout/fragment_feature_a_home"
+        android:label="fr_home_a"
+        android:name="br.com.souzabrunoj.architecturesample.ui.feature_a.home.FeatureAHomeFragment" />
+
+</navigation>

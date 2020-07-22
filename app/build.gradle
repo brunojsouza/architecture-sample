@@ -37,6 +37,8 @@ dependencies {
     implementation ext.libraries.coreKtxVersion
     implementation ext.libraries.appCompat
     implementation ext.libraries.constraintlayout
+    implementation ext.libraries.navigationFragment
+    implementation ext.libraries.navigationUiKtx
 
     testImplementation ext.libraries.junit
     androidTestImplementation ext.libraries.extJunit
