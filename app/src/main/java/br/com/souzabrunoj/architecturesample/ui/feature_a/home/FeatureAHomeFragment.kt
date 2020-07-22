@@ -5,13 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import br.com.souzabrunoj.architecturesample.R
+import br.com.souzabrunoj.architecturesample.databinding.FragmentFeatureAHomeBinding
 
 class FeatureAHomeFragment : Fragment() {
 
+    private lateinit var binding: FragmentFeatureAHomeBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_feature_a_home, container, false)
+        binding = FragmentFeatureAHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
-
 }

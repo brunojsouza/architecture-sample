@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Architecture Sample</string>
+    <string name="feature_a">Feature A</string>
+    <string name="feature_b">Feature B</string>
 </resources>
