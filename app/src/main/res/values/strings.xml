@@ -2,4 +2,6 @@
     <string name="app_name">Architecture Sample</string>
     <string name="feature_a">Feature A</string>
     <string name="feature_b">Feature B</string>
+    <string name="open_feature_a">Open Feature A</string>
+    <string name="open_feature_b">Open Feature B</string>
 </resources>

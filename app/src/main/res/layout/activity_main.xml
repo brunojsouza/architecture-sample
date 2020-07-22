@@ -11,20 +11,19 @@
         android:id="@+id/bt_feature_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/feature_a"
+        android:text="@string/open_feature_a"
         app:layout_constraintBottom_toTopOf="@id/bt_feature_b"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <Button
         android:id="@+id/bt_feature_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="@string/feature_b"
+        android:text="@string/open_feature_b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
