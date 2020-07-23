@@ -8,4 +8,8 @@ class FeatureAViewModel(private val router: FeatureARouter): ViewModel() {
     fun openFeatureB(){
         router.openFeatureB()
     }
+
+    fun fromHomeToSecondScreen(){
+        router.fromHomeToSecondScreen()
+    }
 }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import br.com.souzabrunoj.architecturesample.R
 import br.com.souzabrunoj.architecturesample.databinding.FragmentFeatureAHomeBinding
 import br.com.souzabrunoj.architecturesample.ui.feature_a.home.view_model.FeatureAViewModel
@@ -14,7 +15,7 @@ import org.koin.core.parameter.parametersOf
 
 class FeatureAHomeFragment : Fragment() {
 
-    private val viewModel: FeatureAViewModel by viewModel { parametersOf(activity) }
+    private val viewModel: FeatureAViewModel by viewModel { parametersOf(activity, findNavController()) }
     private lateinit var binding: FragmentFeatureAHomeBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -30,5 +31,6 @@ class FeatureAHomeFragment : Fragment() {
         }
 
         binding.btOpenNewFeature.setOnClickListener { viewModel.openFeatureB() }
+        binding.btOpenSecondScreen.setOnClickListener { viewModel.fromHomeToSecondScreen() }
     }
 }
