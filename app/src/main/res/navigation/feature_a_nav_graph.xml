@@ -9,6 +9,17 @@
         android:id="@+id/fr_home_a"
         tools:layout="@layout/fragment_feature_a_home"
         android:label="fr_home_a"
-        android:name="br.com.souzabrunoj.architecturesample.ui.feature_a.home.FeatureAHomeFragment" />
+        android:name="br.com.souzabrunoj.architecturesample.ui.feature_a.home.FeatureAHomeFragment" >
+
+        <action
+            android:id="@+id/action_from_home_to_second_screen_fragment"
+            app:destination="@id/fr_second_screen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fr_second_screen"
+        tools:layout="@layout/fragment_second_screen"
+        android:label="fr_second_screen"
+        android:name="br.com.souzabrunoj.architecturesample.ui.feature_a.flow.SecondScreenFragment" />
 
 </navigation>
