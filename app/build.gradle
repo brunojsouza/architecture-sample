@@ -25,6 +25,10 @@ android {
         }
     }
 
+    androidExtensions {
+        experimental = true
+    }
+
     buildFeatures {
         viewBinding = true
     }
@@ -39,6 +43,8 @@ dependencies {
     implementation ext.libraries.constraintlayout
     implementation ext.libraries.navigationFragment
     implementation ext.libraries.navigationUiKtx
+    implementation ext.libraries.koinViewModel
+    implementation ext.libraries.koinCore
 
     testImplementation ext.libraries.junit
     androidTestImplementation ext.libraries.extJunit

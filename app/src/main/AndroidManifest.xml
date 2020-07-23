@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:name=".application.AppApplication"
         tools:ignore="AllowBackup">
         <activity android:name=".ui.feature_b.FeatureBActivity"/>
         <activity android:name=".ui.feature_a.FeatureAActivity" />
