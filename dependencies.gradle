@@ -18,6 +18,11 @@ ext {
     navigationVersion = '2.3.0'
     koinVersion = '2.1.6'
 
+    //data
+    retrofitVersion = '2.6.1'
+    httpIntercptorVersion = "3.8.0"
+    okhttpVersion = "4.2.1"
+
     //Test Libs Version
     junitVersion = '4.12'
     extJunitVersion = '1.1.1'
@@ -34,6 +39,10 @@ ext {
             navigationFragment          : "androidx.navigation:navigation-fragment-ktx:$navigationVersion",
             navigationUiKtx             : "androidx.navigation:navigation-ui-ktx:$navigationVersion",
             koinCore                    : "org.koin:koin-core:$koinVersion",
-            koinViewModel               : "org.koin:koin-android-viewmodel:$koinVersion"
+            koinViewModel               : "org.koin:koin-android-viewmodel:$koinVersion",
+            retrofit                    : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            httpInterceptor             : "com.squareup.okhttp3:logging-interceptor:$httpIntercptorVersion",
+            okhttp                      : "com.squareup.okhttp3:okhttp:$okhttpVersion",
+            gsonConvertFactory         : "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     ]
 }
