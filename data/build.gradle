@@ -40,11 +40,10 @@ dependencies {
     implementation ext.libraries.coroutinesCore
     implementation ext.libraries.coroutinesAndroid
     implementation ext.libraries.koinCore
-
-
+    
     //projects
-    api project(":domain")
-    api project(":repository")
+    implementation project(":domain")
+    implementation project(":repository")
 
     testImplementation ext.libraries.junit
     androidTestImplementation ext.libraries.extJunit
