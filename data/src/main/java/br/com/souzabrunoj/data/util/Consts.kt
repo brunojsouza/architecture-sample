@@ -5,5 +5,5 @@ object WebService {
 }
 
 object Helper {
-    const val EMPTY_LONG_NUMBER = 0L;
+    const val EMPTY_LONG_NUMBER = 0L
 }
