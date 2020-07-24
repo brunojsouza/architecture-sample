@@ -46,6 +46,12 @@ dependencies {
     implementation ext.libraries.navigationUiKtx
     implementation ext.libraries.koinViewModel
     implementation ext.libraries.koinCore
+    implementation ext.libraries.okhttp
+    implementation ext.libraries.coroutinesCore
+    implementation ext.libraries.coroutinesAndroid
+
+    //projects
+    api project(":data")
 
     testImplementation ext.libraries.junit
     androidTestImplementation ext.libraries.extJunit

@@ -5,4 +5,6 @@
     <string name="open_feature_a">Open Feature A</string>
     <string name="open_feature_b">Open Feature B</string>
     <string name="second_screen">Second Screen</string>
+    <string name="world_covid_situation">Casos de Covid no mundo</string>
+    <string name="new_world_cases">%s novos casos</string>
 </resources>

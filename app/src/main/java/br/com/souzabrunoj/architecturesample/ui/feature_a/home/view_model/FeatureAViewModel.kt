@@ -1,15 +1,15 @@
 package br.com.souzabrunoj.architecturesample.ui.feature_a.home.view_model
 
-import androidx.lifecycle.ViewModel
+import br.com.souzabrunoj.architecturesample.ui.base.BaseViewModel
 import br.com.souzabrunoj.architecturesample.ui.feature_a.router.FeatureARouter
 
-class FeatureAViewModel(private val router: FeatureARouter): ViewModel() {
+class FeatureAViewModel(private val router: FeatureARouter) : BaseViewModel() {
 
-    fun openFeatureB(){
+    fun openFeatureB() {
         router.openFeatureB()
     }
 
-    fun fromHomeToSecondScreen(){
+    fun fromHomeToSecondScreen() {
         router.fromHomeToSecondScreen()
     }
 }

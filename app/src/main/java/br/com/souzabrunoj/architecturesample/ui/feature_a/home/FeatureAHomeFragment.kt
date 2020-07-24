@@ -15,10 +15,19 @@ import org.koin.core.parameter.parametersOf
 
 class FeatureAHomeFragment : Fragment() {
 
-    private val viewModel: FeatureAViewModel by viewModel { parametersOf(activity, findNavController()) }
+    private val viewModel: FeatureAViewModel by viewModel {
+        parametersOf(
+            activity,
+            findNavController()
+        )
+    }
     private lateinit var binding: FragmentFeatureAHomeBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = FragmentFeatureAHomeBinding.inflate(inflater, container, false)
         return binding.root
     }

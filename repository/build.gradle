@@ -30,8 +30,14 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation ext.libraries.kotlinStdLib
     implementation ext.libraries.coreKtxVersion
+    implementation ext.libraries.coroutinesCore
+    implementation ext.libraries.coroutinesAndroid
+
+    //projects
+    api project(":domain")
 
     testImplementation ext.libraries.junit
     androidTestImplementation ext.libraries.extJunit
     androidTestImplementation ext.libraries.espressoCore
+
 }
