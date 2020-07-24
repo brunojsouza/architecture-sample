@@ -16,7 +16,7 @@ val presentationModules = module {
     }
     factory { (activity: AppCompatActivity) -> FeatureBRouter(activity) }
 
-    viewModel { (activity: AppCompatActivity) -> FeatureBViewModel(get { parametersOf(activity) }) }
+    viewModel { (activity: AppCompatActivity) -> FeatureBViewModel(get { parametersOf(activity) }, get()) }
     viewModel { (activity: AppCompatActivity, navController: NavController) ->
         FeatureAViewModel(get { parametersOf(activity, navController)
         })

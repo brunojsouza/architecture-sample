@@ -9,14 +9,11 @@ import br.com.souzabrunoj.architecturesample.ui.feature_b.router.FeatureBRouter
 import br.com.souzabrunoj.architecturesample.util.ViewState
 import br.com.souzabrunoj.domain.model.GlobalData
 import br.com.souzabrunoj.domain.usecase.GlobalDataUseCase
-import org.koin.core.KoinComponent
-import org.koin.core.inject
 
 class FeatureBViewModel(
-    private val router: FeatureBRouter
-) : BaseViewModel(), KoinComponent {
-
-    private val useCase: GlobalDataUseCase by inject()
+    private val router: FeatureBRouter,
+    private val useCase: GlobalDataUseCase
+) : BaseViewModel() {
 
     private val _globalDataState by lazy { MutableLiveData<ViewState<GlobalData>>() }
     val globalDateState = _globalDataState
