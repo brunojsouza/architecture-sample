@@ -32,6 +32,7 @@ dependencies {
     implementation ext.libraries.coreKtxVersion
     implementation ext.libraries.coroutinesCore
     implementation ext.libraries.coroutinesAndroid
+    implementation ext.libraries.koinCore
 
     testImplementation ext.libraries.junit
     androidTestImplementation ext.libraries.extJunit

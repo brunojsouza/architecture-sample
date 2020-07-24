@@ -51,7 +51,8 @@ dependencies {
     implementation ext.libraries.coroutinesAndroid
 
     //projects
-    api project(":data")
+    implementation project(":data")
+    implementation project(":di")
 
     testImplementation ext.libraries.junit
     androidTestImplementation ext.libraries.extJunit

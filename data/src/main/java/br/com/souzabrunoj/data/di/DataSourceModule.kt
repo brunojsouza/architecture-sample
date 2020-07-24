@@ -1,4 +1,4 @@
-package br.com.souzabrunoj.architecturesample.di.module
+package br.com.souzabrunoj.data.di
 
 import br.com.souzabrunoj.data.remote.GlobalDataSourceImpl
 import br.com.souzabrunoj.data.remote.factory.WebServiceFactory
@@ -10,10 +10,8 @@ import org.koin.dsl.bind
 import org.koin.dsl.module
 
 val dataSourceModule = module {
-
     single { RequestWrapperImpl() } bind RequestWrapper::class
     single { WebServiceFactory.createOkHttpClient() }
     single { WebServiceFactory.createWebService(get()) as CovidApiService }
-
     single { GlobalDataSourceImpl(get()) as GlobalDataSource }
 }

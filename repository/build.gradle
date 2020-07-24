@@ -32,6 +32,7 @@ dependencies {
     implementation ext.libraries.coreKtxVersion
     implementation ext.libraries.coroutinesCore
     implementation ext.libraries.coroutinesAndroid
+    implementation ext.libraries.koinCore
 
     //projects
     api project(":domain")

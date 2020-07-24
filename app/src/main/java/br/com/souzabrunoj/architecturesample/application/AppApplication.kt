@@ -1,7 +1,9 @@
 package br.com.souzabrunoj.architecturesample.application
 
 import android.app.Application
-import br.com.souzabrunoj.architecturesample.di.DIFactory
+import br.com.souzabrunoj.architecturesample.di.module.applicationModules
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 class AppApplication : Application() {
 
@@ -11,6 +13,8 @@ class AppApplication : Application() {
     }
 
     private fun setupKoin() {
-        DIFactory.getInstance(this)
+        startKoin {
+            modules(applicationModules)
+        }.androidContext(this)
     }
 }

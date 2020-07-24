@@ -1,4 +1,4 @@
-package br.com.souzabrunoj.architecturesample.di.module
+package br.com.souzabrunoj.domain.di
 
 import br.com.souzabrunoj.domain.usecase.GlobalDataUseCase
 import org.koin.dsl.module
