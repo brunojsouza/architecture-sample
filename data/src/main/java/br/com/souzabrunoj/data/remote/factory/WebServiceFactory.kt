@@ -1,6 +1,6 @@
 package br.com.souzabrunoj.data.remote.factory
 
-import br.com.souzabrunoj.data.util.WebService.BASE_GLOBAL_COVID_SUMMARY_URL
+import br.com.souzabrunoj.service.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
 import retrofit2.Converter
@@ -11,10 +11,7 @@ import java.lang.reflect.Type
 import java.util.concurrent.TimeUnit
 
 object WebServiceFactory {
-    inline fun <reified T> createWebService(
-        okHttpClient: OkHttpClient,
-        url: String = BASE_GLOBAL_COVID_SUMMARY_URL
-    ): T {
+    inline fun <reified T> createWebService(okHttpClient: OkHttpClient, url: String = BuildConfig.BASE_URL): T {
         val retrofit = Retrofit.Builder()
             .baseUrl(url)
             .client(okHttpClient)

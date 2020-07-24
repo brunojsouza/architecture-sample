@@ -12,6 +12,6 @@ import org.koin.dsl.module
 val dataSourceModule = module {
     single { RequestWrapperImpl() } bind RequestWrapper::class
     single { WebServiceFactory.createOkHttpClient() }
-    single { WebServiceFactory.createWebService(get()) as CovidApiService }
-    single { GlobalDataSourceImpl(get()) as GlobalDataSource }
+    single<CovidApiService> { WebServiceFactory.createWebService(get()) }
+    single<GlobalDataSource> { GlobalDataSourceImpl(get()) }
 }

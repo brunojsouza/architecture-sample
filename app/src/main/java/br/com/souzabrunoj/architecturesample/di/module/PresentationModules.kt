@@ -12,20 +12,13 @@ import org.koin.dsl.module
 
 val presentationModules = module {
     factory { (activity: AppCompatActivity, navController: NavController) ->
-        FeatureARouter(
-            activity,
-            navController
-        )
+        FeatureARouter(activity, navController)
     }
     factory { (activity: AppCompatActivity) -> FeatureBRouter(activity) }
 
     viewModel { (activity: AppCompatActivity) -> FeatureBViewModel(get { parametersOf(activity) }) }
     viewModel { (activity: AppCompatActivity, navController: NavController) ->
-        FeatureAViewModel(get {
-            parametersOf(
-                activity,
-                navController
-            )
+        FeatureAViewModel(get { parametersOf(activity, navController)
         })
     }
 }
