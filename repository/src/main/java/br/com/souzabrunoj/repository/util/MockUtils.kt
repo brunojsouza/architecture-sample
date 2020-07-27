@@ -1,4 +1,4 @@
-package br.com.souzabrunoj.data.util
+package br.com.souzabrunoj.repository.util
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

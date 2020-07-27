@@ -1,7 +1,7 @@
 package br.com.souzabrunoj.data.service.base
 
-import br.com.souzabrunoj.data.commom.toNetworkingError
 import br.com.souzabrunoj.data.service.SafeResult
+import br.com.souzabrunoj.repository.common.toNetworkingError
 
 abstract class BaseNetworking {
     suspend fun <R : Any> safeApiCall(block: suspend () -> R): R {
@@ -15,7 +15,7 @@ abstract class BaseNetworking {
         }.run {
             when (this) {
                 is SafeResult.Success -> data
-                is SafeResult.Error -> throw this.exception.toNetworkingError()
+                is SafeResult.Error -> throw exception.toNetworkingError()
             }
         }
     }

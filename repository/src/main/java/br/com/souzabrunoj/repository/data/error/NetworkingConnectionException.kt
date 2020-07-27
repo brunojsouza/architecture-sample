@@ -1,4 +1,4 @@
-package br.com.souzabrunoj.data.model.error
+package br.com.souzabrunoj.repository.data.error
 
 import java.io.IOException
 

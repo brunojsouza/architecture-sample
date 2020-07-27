@@ -1,4 +1,4 @@
-package br.com.souzabrunoj.data.model
+package br.com.souzabrunoj.repository.data.base
 
 import com.google.gson.annotations.SerializedName
 

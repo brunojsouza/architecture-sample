@@ -1,9 +1,9 @@
-package br.com.souzabrunoj.data.commom
+package br.com.souzabrunoj.repository.common
 
-import br.com.souzabrunoj.data.model.BaseResponse
-import br.com.souzabrunoj.data.model.error.NetworkingConnectionException
-import br.com.souzabrunoj.data.model.error.NetworkingError
-import br.com.souzabrunoj.data.util.fromJson
+import br.com.souzabrunoj.repository.data.base.BaseResponse
+import br.com.souzabrunoj.repository.data.error.NetworkingConnectionException
+import br.com.souzabrunoj.repository.data.error.NetworkingError
+import br.com.souzabrunoj.repository.util.fromJson
 import retrofit2.HttpException
 import java.net.ConnectException
 import java.net.UnknownHostException

@@ -1,9 +1,9 @@
 package br.com.souzabrunoj.repository.base
 
-import br.com.souzabrunoj.data.model.error.NetworkingError
 import br.com.souzabrunoj.domain.commom.Either
 import br.com.souzabrunoj.domain.commom.Error
 import br.com.souzabrunoj.domain.commom.Failure
+import br.com.souzabrunoj.repository.data.error.NetworkingError
 import retrofit2.HttpException
 
 abstract class BaseRepository {

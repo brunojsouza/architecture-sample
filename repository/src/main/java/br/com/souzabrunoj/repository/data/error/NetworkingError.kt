@@ -1,4 +1,4 @@
-package br.com.souzabrunoj.data.model.error
+package br.com.souzabrunoj.repository.data.error
 
 data class NetworkingError(
     override val message: String?,
