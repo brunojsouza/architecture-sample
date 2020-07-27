@@ -1,6 +1,5 @@
-package br.com.souzabrunoj.data.remote.factory
+package br.com.souzabrunoj.data.service.core
 
-import br.com.souzabrunoj.data.service.RequestInterceptor
 import br.com.souzabrunoj.service.BuildConfig
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.OkHttpClient

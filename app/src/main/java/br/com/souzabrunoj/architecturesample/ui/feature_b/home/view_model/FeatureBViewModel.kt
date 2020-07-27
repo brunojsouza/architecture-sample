@@ -14,7 +14,7 @@ import br.com.souzabrunoj.domain.usecase.GlobalDataUseCase
 import br.com.souzabrunoj.domain.usecase.UseCase
 import kotlinx.coroutines.launch
 
-class FeatureBViewModel(private val router: FeatureBRouter, private val useCase: GlobalDataUseCase):ViewModel()  {
+class FeatureBViewModel(private val router: FeatureBRouter, private val useCase: GlobalDataUseCase): ViewModel()  {
 
     private val _globalDataState by lazy { MutableLiveData<ViewState<GlobalData>>() }
     val globalDateState = _globalDataState

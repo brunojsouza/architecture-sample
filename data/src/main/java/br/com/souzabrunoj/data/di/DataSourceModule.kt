@@ -2,9 +2,9 @@ package br.com.souzabrunoj.data.di
 
 import br.com.souzabrunoj.data.remote.GlobalDataSource
 import br.com.souzabrunoj.data.remote.GlobalDataSourceImpl
-import br.com.souzabrunoj.data.remote.factory.WebServiceFactory
 import br.com.souzabrunoj.data.service.CovidApiService
-import br.com.souzabrunoj.data.service.RequestInterceptor
+import br.com.souzabrunoj.data.service.core.RequestInterceptor
+import br.com.souzabrunoj.data.service.core.WebServiceFactory
 import br.com.souzabrunoj.data.util.RequestWrapper
 import br.com.souzabrunoj.data.util.RequestWrapperImpl
 import org.koin.dsl.bind

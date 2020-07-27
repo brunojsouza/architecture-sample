@@ -1,4 +1,4 @@
-package br.com.souzabrunoj.data.faker
+package br.com.souzabrunoj.repository.fake
 
 import br.com.souzabrunoj.data.model.GlobalDataResponse
 import br.com.souzabrunoj.data.randomLong

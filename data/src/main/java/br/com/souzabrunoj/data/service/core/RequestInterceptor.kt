@@ -1,4 +1,4 @@
-package br.com.souzabrunoj.data.service
+package br.com.souzabrunoj.data.service.core
 
 import okhttp3.Interceptor
 import okhttp3.Response

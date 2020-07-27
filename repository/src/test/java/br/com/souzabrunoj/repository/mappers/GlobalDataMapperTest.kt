@@ -1,6 +1,6 @@
-package br.com.souzabrunoj.data.mapper
+package br.com.souzabrunoj.repository.mappers
 
-import br.com.souzabrunoj.data.faker.GlobalDataResponseFaker
+import br.com.souzabrunoj.repository.fake.GlobalDataResponseFaker
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

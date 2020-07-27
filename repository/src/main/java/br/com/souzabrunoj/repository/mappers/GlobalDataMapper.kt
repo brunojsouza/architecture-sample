@@ -1,7 +1,7 @@
-package br.com.souzabrunoj.data.mapper
+package br.com.souzabrunoj.repository.mappers
 
 import br.com.souzabrunoj.data.model.GlobalDataResponse
-import br.com.souzabrunoj.data.util.Helper.EMPTY_LONG_NUMBER
+import br.com.souzabrunoj.domain.commom.Helper.EMPTY_LONG_NUMBER
 import br.com.souzabrunoj.domain.model.GlobalData
 
 fun GlobalDataResponse.toGlobalData(): GlobalData {

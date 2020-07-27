@@ -1,9 +1,10 @@
-package br.com.souzabrunoj.data.service
+package br.com.souzabrunoj.data.service.base
 
-typealias Block<R> = suspend () -> R
+import br.com.souzabrunoj.data.commom.toNetworkingError
+import br.com.souzabrunoj.data.service.SafeResult
 
 abstract class BaseNetworking {
-    suspend fun <R : Any> safeApiCall(block: Block<R>): R {
+    suspend fun <R : Any> safeApiCall(block: suspend () -> R): R {
         var response: R? = null
         return try {
             response = block.invoke()

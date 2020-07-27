@@ -1,6 +1,8 @@
-package br.com.souzabrunoj.data.service
+package br.com.souzabrunoj.data.commom
 
 import br.com.souzabrunoj.data.model.BaseResponse
+import br.com.souzabrunoj.data.model.error.NetworkingConnectionException
+import br.com.souzabrunoj.data.model.error.NetworkingError
 import br.com.souzabrunoj.data.util.fromJson
 import retrofit2.HttpException
 import java.net.ConnectException
