@@ -4,51 +4,58 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import br.com.souzabrunoj.architecturesample.util.Failure
-import br.com.souzabrunoj.architecturesample.util.Loading
-import br.com.souzabrunoj.architecturesample.util.Success
 import br.com.souzabrunoj.architecturesample.util.ViewState
+import br.com.souzabrunoj.architecturesample.util.ViewStatus
+import br.com.souzabrunoj.domain.commom.Failure
 
 fun <T> MutableLiveData<ViewState<T>>.postSuccess(data: T) {
-    this.value = Success(data)
+    this.value = ViewState(ViewStatus.SUCCESS, data = data)
 }
 
 fun <T> MutableLiveData<ViewState<T>>.postError(error: Throwable?) {
-    this.value = Failure(error)
+    this.value = ViewState(ViewStatus.ERROR, error = error)
 }
 
 fun <T> MutableLiveData<ViewState<T>>.postLoading() {
-    this.value = Loading()
+    this.value = ViewState(ViewStatus.LOADING)
+}
+
+fun <T> MutableLiveData<ViewState<T>>.postFailure(failure: Failure) {
+    this.value = ViewState(ViewStatus.FAILURE, failure = failure)
 }
 
 fun <T> LiveData<ViewState<T>>.observeEvent(
     lifecycleOwner: LifecycleOwner,
     onLoading: (() -> Unit)? = null,
     onSuccess: ((T) -> Unit)? = null,
-    onError: ((Throwable) -> Unit)? = null
+    onError: ((Throwable) -> Unit)? = null,
+    onFailure: ((Failure) -> Unit)? = null
 ) {
     this.observe(lifecycleOwner, Observer { viewState ->
 
-        when (viewState) {
-
-            is Loading -> {
+        when (this.value?.status) {
+            ViewStatus.LOADING -> {
                 onLoading?.invoke()
             }
 
-            is Success -> {
+            ViewStatus.SUCCESS -> {
                 viewState.data?.let {
                     onSuccess?.invoke(it)
                 }
             }
 
-            is Failure -> {
+            ViewStatus.ERROR -> {
                 viewState.error?.let {
                     onError?.invoke(it)
                 }
             }
 
+            ViewStatus.FAILURE -> {
+                viewState.failure?.let {
+                    onFailure?.invoke(it)
+                }
+            }
             else -> Unit
         }
     })
-
 }

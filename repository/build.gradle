@@ -32,9 +32,11 @@ dependencies {
     implementation ext.libraries.coreKtxVersion
     implementation ext.libraries.coroutinesCore
     implementation ext.libraries.koinCore
+    implementation ext.libraries.retrofit
 
     //projects
     implementation project(":domain")
+    implementation project(":data")
 
     testImplementation ext.libraries.junit
     androidTestImplementation ext.libraries.extJunit

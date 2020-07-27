@@ -1,6 +1,14 @@
 package br.com.souzabrunoj.architecturesample.util
 
-sealed class ViewState<T>()
-data class Success<T>(val data: T) : ViewState<T>()
-data class Failure<T>(val error: Throwable?) : ViewState<T>()
-class Loading<T>() : ViewState<T>()
+import br.com.souzabrunoj.domain.commom.Failure
+
+class ViewState<T>(
+    val status: ViewStatus,
+    val data: T? = null,
+    val error: Throwable? = null,
+    val failure: Failure? = null
+)
+
+enum class ViewStatus {
+    LOADING, SUCCESS, ERROR, FAILURE
+}

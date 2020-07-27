@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface CovidApiService {
 
-    @GET("summary")
+    @GET("summarys")
     suspend fun getSummary(): GlobalResponse
 }

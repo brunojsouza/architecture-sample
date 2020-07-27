@@ -35,7 +35,6 @@ class FeatureBHomeFragment : Fragment() {
             setDisplayHomeAsUpEnabled(true)
         }
 
-
         binding.btOpenNewFeature.setOnClickListener { viewModel.openFeatureA() }
 
         start()
@@ -51,7 +50,7 @@ class FeatureBHomeFragment : Fragment() {
             onSuccess = {
                 binding.tvNewConfirmed.text = requireContext().getString(R.string.new_world_cases, it.getNewConfirmedInStringFormat())
             },
-            onError = {
+            onFailure = {
                 Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
             })
     }

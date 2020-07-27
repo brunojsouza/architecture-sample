@@ -1,6 +1,8 @@
 package br.com.souzabrunoj.data.remote.factory
 
+import br.com.souzabrunoj.data.service.RequestInterceptor
 import br.com.souzabrunoj.service.BuildConfig
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
 import retrofit2.Converter
@@ -15,14 +17,15 @@ object WebServiceFactory {
         val retrofit = Retrofit.Builder()
             .baseUrl(url)
             .client(okHttpClient)
-            .addConverterFactory(UnitConverterFactory)
             .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
         return retrofit.create()
     }
 
-    fun createOkHttpClient(): OkHttpClient =
+    fun createOkHttpClient(requestInterceptor: RequestInterceptor): OkHttpClient =
         OkHttpClient.Builder()
+            .addInterceptor(requestInterceptor)
             .connectTimeout(1800, TimeUnit.SECONDS)
             .readTimeout(1800, TimeUnit.SECONDS)
             .writeTimeout(1800, TimeUnit.SECONDS)

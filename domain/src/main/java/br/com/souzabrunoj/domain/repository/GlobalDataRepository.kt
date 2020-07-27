@@ -1,8 +1,9 @@
 package br.com.souzabrunoj.domain.repository
 
+import br.com.souzabrunoj.domain.commom.Either
+import br.com.souzabrunoj.domain.commom.Failure
 import br.com.souzabrunoj.domain.model.GlobalData
-import kotlinx.coroutines.flow.Flow
 
 interface GlobalDataRepository {
-     fun getGlobalData(): Flow<GlobalData>
+     suspend fun getGlobalData(): Either<Failure, GlobalData>
 }
