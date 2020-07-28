@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GeneralAttributes">
+        <attr name="error_message" format="string" />
+        <attr name="label" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TextInput">
+        <attr name="android:text"/>
+        <attr name="android:inputType" />
+        <attr name="label"/>
+        <attr name="error_message"/>
+    </declare-styleable>
+</resources>

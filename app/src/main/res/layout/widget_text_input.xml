@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <TextView
+        android:id="@+id/tv_text_input_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Body.TextInputLabel"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Label"
+        tools:textColor="@color/black"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/ib_text_input_help_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/margin_xxsmall"
+        android:background="@null"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tv_text_input_label"
+        app:layout_constraintStart_toEndOf="@id/tv_text_input_label"
+        app:layout_constraintTop_toTopOf="@id/tv_text_input_label"
+        tools:ignore="contentDescription"
+        tools:srcCompat="@drawable/ic_launcher_foreground"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/ed_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_margin_xsmall"
+        android:background="@drawable/selector_background_text_input"
+        android:drawablePadding="@dimen/padding_small"
+        android:gravity="center_vertical"
+        android:inputType="textNoSuggestions|textMultiLine"
+        android:minHeight="@dimen/default_min_height_text_input_height"
+        android:paddingStart="@dimen/view_margin_small"
+        android:paddingTop="@dimen/view_margin_xsmall"
+        android:paddingEnd="@dimen/view_margin_small"
+        android:paddingBottom="@dimen/view_margin_xsmall"
+        android:textAppearance="@style/TextAppearance.Body"
+        android:textColor="@color/selector_text_color_text_input"
+        android:textColorHint="@color/selector_hint_color_text_input"
+        app:hintTextAppearance="@style/TextAppearance.Body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_text_input_label"
+        tools:background="@color/white"
+        tools:ignore="AutoFill,LabelFor"
+        tools:text="Valor"
+        tools:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_message_error"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xxsmall"
+        android:gravity="end"
+        android:textAppearance="@style/TextAppearance.Body.TextInputErrorMessage"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_text_input"
+        tools:text="Alguma mensagem"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_icon_left"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="@dimen/view_margin_small"
+        app:layout_constraintBottom_toBottomOf="@id/ed_text_input"
+        app:layout_constraintEnd_toEndOf="@id/ed_text_input"
+        app:layout_constraintTop_toTopOf="@id/ed_text_input"
+        tools:ignore="contentDescription" />
+
+    <ProgressBar
+        android:id="@+id/ivTemMeuVotoTextInputLoading"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="@dimen/view_margin_small"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ed_text_input"
+        app:layout_constraintEnd_toEndOf="@id/ed_text_input"
+        app:layout_constraintTop_toTopOf="@id/ed_text_input" />
+</merge>

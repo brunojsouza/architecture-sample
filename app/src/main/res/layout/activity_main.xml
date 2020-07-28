@@ -7,16 +7,38 @@
     android:layout_margin="32dp"
     tools:context=".MainActivity">
 
+    <br.com.souzabrunoj.architecturesample.widget.TextInput
+        android:id="@+id/ti_text_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/ti_text_input_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <br.com.souzabrunoj.architecturesample.widget.TextInput
+        android:id="@+id/ti_text_input_error"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:inputType="number"
+        app:error_message="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@id/bt_feature_a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ti_text_input" />
+
     <Button
         android:id="@+id/bt_feature_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/open_feature_a"
         app:layout_constraintBottom_toTopOf="@id/bt_feature_b"
-        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginTop="36dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/ti_text_input_error" />
 
     <Button
         android:id="@+id/bt_feature_b"

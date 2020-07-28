@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default Margins -->
+    <dimen name="margin_xxxsmall">2dp</dimen>
+    <dimen name="margin_xxsmall">4dp</dimen>
+    <dimen name="margin_xsmall">8dp</dimen>
+    <dimen name="margin_small">16dp</dimen>
+    <dimen name="margin_normal">20dp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_middle">32dp</dimen>
+    <dimen name="margin_large">40dp</dimen>
+    <dimen name="margin_xlarge">60dp</dimen>
+    <dimen name="margin_xxlarge">92dp</dimen>
+    <dimen name="margin_xxxlarge">120dp</dimen>
+
+    <dimen name="view_margin_xxxsmall">@dimen/margin_xxxsmall</dimen>
+    <dimen name="view_margin_xxsmall">@dimen/margin_xxsmall</dimen>
+    <dimen name="view_margin_xsmall">@dimen/margin_xsmall</dimen>
+    <dimen name="view_margin_small">@dimen/margin_small</dimen>
+    <dimen name="view_margin_normal">@dimen/margin_normal</dimen>
+    <dimen name="view_margin_medium">@dimen/margin_medium</dimen>
+    <dimen name="view_margin_large">@dimen/margin_large</dimen>
+    <dimen name="view_margin_xlarge">@dimen/margin_xlarge</dimen>
+    <dimen name="view_margin_xxlarge">@dimen/margin_xxlarge</dimen>
+    <dimen name="view_margin_xxxlarge">@dimen/margin_xxxlarge</dimen>
+
+    <dimen name="padding_xxxsmall">@dimen/margin_xxxsmall</dimen>
+    <dimen name="padding_xxsmall">@dimen/margin_xxsmall</dimen>
+    <dimen name="padding_xsmall">@dimen/margin_xsmall</dimen>
+    <dimen name="padding_small">@dimen/margin_small</dimen>
+
+    <dimen name="default_text_input_background_corner_radius">12dp</dimen>
+
+    <!-- Specific Margins -->
+    <dimen name="default_min_height_text_input_height">44dp</dimen>
+</resources>

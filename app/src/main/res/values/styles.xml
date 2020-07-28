@@ -7,4 +7,27 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="lineSpacing">0sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.Body">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Body.TextInputLabel">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Body.TextInputErrorMessage">
+        <item name="android:textColor">@color/error_color</item>
+    </style>
+
 </resources>
